@@ -8,21 +8,21 @@ const Array : Array<string> = ['A','B','C'];
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title : string = 'rowonss';
+  id! : string;
+  pwd! : string;
+  visible1 : boolean = false;
+  visible2 : boolean = false;
 
-  showArray : Array<string>;
-
-  constructor() {
-    this.showArray = Array;
+  tryToLogin() : void{
+    if(this.id == 'admin' && this.pwd == '1234'){
+      this.visible1 = true;
+      this.visible2 = false;
+    }
+    else if(this.id == 'root' && this.pwd == '1234'){
+      this.visible2 = true;
+      this.visible1 = false;
+    }
   }
 
-  public clickAfter() : void {
-    this.innerfunc();
-    console.log(Array);
-    console.log(this.title);
-  }
 
-  private innerfunc(){
-    Array.push('data'+Array.length);
-  }
 }

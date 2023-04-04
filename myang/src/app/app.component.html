@@ -1,8 +1,8 @@
 
+<div>wellcome</div>
+<input type="text" placeholder="id" [(ngModel)]="id"/>
+<input type="text" placeholder="password" [(ngModel)]="pwd"/>
+<button (click)="tryToLogin()">Login</button>
 
-
-<button (click)="clickAfter()">{{title}}</button>
-<div *ngFor = "let item of showArray">{{item}}</div>
-<div>{{showArray}}</div>
-
-<app-hello></app-hello>
+<app-hello *ngIf="visible1"></app-hello>
+<app-world *ngIf="visible2"></app-world>
